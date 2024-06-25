@@ -30,16 +30,20 @@
         #instruction {
             margin-bottom: 20px;
         }
+        #myImage {
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <div id="instruction">Click the text below to copy it:</div>
+    <div id="instruction">Hi! click the username below to copy it:</div>
     <div id="copyText">ccstore</div>
+    <img id="myImage" src="https://iili.io/d3Cchle.png" alt="discord logo">
     <script>
         document.getElementById("copyText").onclick = function() {
             var text = "ccstore";
             navigator.clipboard.writeText(text).then(function() {
-                alert('Text "ccstore" copied to clipboard!');
+                alert('"ccstore" copied to clipboard, now you can send me a friend request!');
             }, function() {
                 alert('Failed to copy the text.');
             });
